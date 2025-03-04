@@ -409,7 +409,7 @@ FEATURES
 }
 
 .book__price--skeleton {
-  width: 200px;
+  max-width: 200px;
   height: 19px;
 }
 

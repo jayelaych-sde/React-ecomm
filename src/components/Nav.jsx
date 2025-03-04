@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import LibraryLogo from "../assets/Library.svg";
 
-function Nav() {
+function Nav({ numberOfItems }) {
   function openMenu() {
     document.body.classList += " menu--open";
   }
@@ -40,7 +40,9 @@ function Nav() {
             <Link to="/cart" className="nav__link">
               <FontAwesomeIcon icon={faShoppingCart} />
             </Link>
-            <span className="cart__length">2</span>
+            {numberOfItems > 0 && (
+              <span className="cart__length">{numberOfItems}</span>
+            )}
           </li>
         </ul>
         <div className="menu__backdrop">
